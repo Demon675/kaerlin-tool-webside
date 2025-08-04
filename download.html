@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaerlin Theme - Download</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-back">← Zurück</a>
+        <h2 class="nav-title">Download</h2>
+    </nav>
+
+    <div class="container">
+        <section class="download-section">
+            <h1 class="section-title animate-fade-in">Wähle dein Theme</h1>
+            <p class="section-subtitle animate-slide-up">Wähle die Datei aus, die du herunterladen möchtest</p>
+
+            <div class="download-grid">
+                <div class="download-card animate-on-scroll">
+                    <div class="card-header">
+                        <div class="file-icon">🎨</div>
+                        <h3>Kaerlin Theme</h3>
+                        <span class="file-type">CSS Datei</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Das offizielle Kaerlin Theme für Vencord mit minimalistischem Design und modernen Farben.</p>
+                        <div class="file-details">
+                            <span class="file-size">≈ 15 KB</span>
+                            <span class="file-version">v1.0</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-primary download-btn" onclick="downloadFile('Kaerlin.theme.css')">
+                            Download
+                        </button>
+                        <button class="btn btn-secondary preview-btn" onclick="previewTheme()">
+                            Vorschau
+                        </button>
+                    </div>
+                </div>
+
+                <div class="download-card animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="card-header">
+                        <div class="file-icon">📦</div>
+                        <h3>Kaerlin Theme + Extras</h3>
+                        <span class="file-type">ZIP Paket</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Komplettpaket mit Theme, Anleitung und zusätzlichen Anpassungsoptionen.</p>
+                        <div class="file-details">
+                            <span class="file-size">≈ 250 KB</span>
+                            <span class="file-version">v1.0</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-primary download-btn" onclick="downloadFile('Kaerlin-theme-package.zip')">
+                            Download Paket
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="installation-guide animate-on-scroll">
+                <h3>Installation</h3>
+                <ol>
+                    <li>Lade die <strong>Kaerlin.theme.css</strong> Datei herunter</li>
+                    <li>Öffne Discord mit Vencord</li>
+                    <li>Gehe zu Einstellungen → Themes</li>
+                    <li>Klicke auf "Theme importieren" und wähle die heruntergeladene Datei</li>
+                    <li>Aktiviere das Theme und genieße!</li>
+                </ol>
+            </div>
+        </section>
+    </div>
+
+    <div class="download-progress" id="downloadProgress" style="display: none;">
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <p>Download läuft...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
