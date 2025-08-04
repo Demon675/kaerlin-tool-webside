@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaerlin Theme - Startseite</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title animate-fade-in">Kaerlin Theme</h1>
+                <p class="hero-subtitle animate-slide-up">Ein elegantes Vencord Theme für dein Discord</p>
+                <div class="hero-buttons animate-slide-up-delay">
+                    <a href="download.html" class="btn btn-primary">Download</a>
+                    <button class="btn btn-secondary" onclick="scrollToInfo()">Mehr erfahren</button>
+                </div>
+            </div>
+            <div class="hero-visual animate-float">
+                <div class="theme-preview">
+                    <div class="discord-mock">
+                        <div class="sidebar"></div>
+                        <div class="chat-area">
+                            <div class="message-bubble"></div>
+                            <div class="message-bubble"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="info-section" id="info">
+            <div class="info-content">
+                <h2 class="section-title">Über das Theme</h2>
+                <div class="features">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Minimalistisches Design</h3>
+                        <p>Saubere Linien und moderne Farben für ein professionelles Aussehen</p>
+                    </div>
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Optimierte Performance</h3>
+                        <p>Leichtgewichtiges CSS ohne Performance-Einbußen</p>
+                    </div>
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Einfache Installation</h3>
+                        <p>Direkte Integration mit Vencord in wenigen Klicks</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
