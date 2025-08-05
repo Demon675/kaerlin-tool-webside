@@ -134,8 +134,8 @@ class DownloadManager {
         message.className = 'success-message';
         message.innerHTML = `
             <div class="message-content">
-                <h3>✓ Download erfolgreich!</h3>
-                <p>${filename} wurde heruntergeladen.</p>
+                <h3>✓ Download successful!</h3>
+                <p>${filename} has been downloaded.</p>
             </div>
         `;
         
@@ -151,8 +151,8 @@ class DownloadManager {
         message.className = 'error-message';
         message.innerHTML = `
             <div class="message-content">
-                <h3>✗ Download fehlgeschlagen</h3>
-                <p>Bitte versuche es erneut.</p>
+                <h3>✗ Download failed</h3>
+                <p>Please try again.</p>
             </div>
         `;
         
@@ -170,10 +170,10 @@ class DownloadManager {
         modal.innerHTML = `
             <div class="modal-content">
                 <span class="close-modal">&times;</span>
-                <h3>Kaerlin Theme Vorschau</h3>
+                <h3>Kaerlin Theme Preview</h3>
                 <div class="preview-container">
                     <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDYwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjMTExMTExIi8+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSI3MiIgaGVpZ2h0PSI0MDAiIGZpbGw9IiMwMDAwMDAiLz4KPHJlY3QgeD0iNzIiIHk9IjAiIHdpZHRoPSIyNDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjMTgxODE4Ii8+CjxyZWN0IHg9IjgwIiB5PSI1MCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzAwZmY0MSIgcng9IjgiLz4KPHJlY3QgeD0iODAiIHk9IjEwMCIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzMzMzMzMyIgcng9IjQiLz4KPHJlY3QgeD0iODAiIHk9IjEzMCIgd2lkdGg9IjE4MCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzMzMzMzMyIgcng9IjQiLz4KPHJlY3QgeD0iODAiIHk9IjE2MCIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzMzMzMzMyIgcng9IjQiLz4KPC9zdmc+" alt="Kaerlin Theme Preview" class="preview-image">
-                    <p>Das Kaerlin Theme verwendet ein dunkles Farbschema mit grünen Akzenten für ein modernes, minimalistisches Aussehen. Das Theme optimiert die Discord-Oberfläche mit sauberen Linien und einem professionellen Look.</p>
+                    <p>The Kaerlin Theme uses a dark color scheme with green accents for a modern, minimalist appearance. The theme optimizes the Discord interface with clean lines and a professional look.</p>
                 </div>
             </div>
         `;
@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         .error-message {
-            background: linear-gradient(135deg, #ff4444, #cc0000);
+            background: linear-gradient(135deg: #ff4444, #cc0000);
             color: white;
             border: 1px solid #ff4444;
         }
