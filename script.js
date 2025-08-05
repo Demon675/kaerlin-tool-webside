@@ -60,15 +60,10 @@ class AnimationController {
 class DownloadManager {
     constructor() {
         this.files = {
-            'Kaerlin.theme.css': {
-                url: 'https://raw.githubusercontent.com/your-repo/Kaerlin-theme/main/Kaerlin.theme.css',
-                filename: 'Kaerlin.theme.css',
+            'Kaerlin.discord.theme.zip': {
+                url: 'https://github.com/Demon675/Kaerlin.discordtheme/releases/download/v.1.0.0/Kaerlin.discord.theme.zip',
+                filename: 'Kaerlin.discord.theme.zip',
                 size: '15 KB'
-            },
-            'Kaerlin-theme-package.zip': {
-                url: 'https://github.com/your-repo/Kaerlin-theme/releases/latest/download/Kaerlin-theme-package.zip',
-                filename: 'Kaerlin-theme-package.zip',
-                size: '250 KB'
             }
         };
     }
@@ -177,8 +172,8 @@ class DownloadManager {
                 <span class="close-modal">&times;</span>
                 <h3>Kaerlin Theme Vorschau</h3>
                 <div class="preview-container">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDYwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjMzEzMzM4Ii8+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSI3MiIgaGVpZ2h0PSI0MDAiIGZpbGw9IiMxRDFEMjAiLz4KPHJlY3QgeD0iNzIiIHk9IjAiIHdpZHRoPSIyNDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjMjYyNzJBIi8+CjxyZWN0IHg9IjgwIiB5PSI1MCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzM4M0E0MCIgcng9IjgiLz4KPHJlY3QgeD0iODAiIHk9IjEwMCIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzQ0NDY0RCIgcng9IjQiLz4KPHJlY3QgeD0iODAiIHk9IjEzMCIgd2lkdGg9IjE4MCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzQ0NDY0RCIgcng9IjQiLz4KPHJlY3QgeD0iODAiIHk9IjE2MCIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzQ0NDY0RCIgcng9IjQiLz4KPC9zdmc+" alt="Kaerlin Theme Preview" class="preview-image">
-                    <p>Das Kaerlin Theme verwendet ein dunkles Farbschema mit violetten Akzenten für ein modernes, minimalistisches Aussehen.</p>
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDYwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjMTExMTExIi8+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSI3MiIgaGVpZ2h0PSI0MDAiIGZpbGw9IiMwMDAwMDAiLz4KPHJlY3QgeD0iNzIiIHk9IjAiIHdpZHRoPSIyNDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjMTgxODE4Ii8+CjxyZWN0IHg9IjgwIiB5PSI1MCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzAwZmY0MSIgcng9IjgiLz4KPHJlY3QgeD0iODAiIHk9IjEwMCIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzMzMzMzMyIgcng9IjQiLz4KPHJlY3QgeD0iODAiIHk9IjEzMCIgd2lkdGg9IjE4MCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzMzMzMzMyIgcng9IjQiLz4KPHJlY3QgeD0iODAiIHk9IjE2MCIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzMzMzMzMyIgcng9IjQiLz4KPC9zdmc+" alt="Kaerlin Theme Preview" class="preview-image">
+                    <p>Das Kaerlin Theme verwendet ein dunkles Farbschema mit grünen Akzenten für ein modernes, minimalistisches Aussehen. Das Theme optimiert die Discord-Oberfläche mit sauberen Linien und einem professionellen Look.</p>
                 </div>
             </div>
         `;
@@ -210,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new AnimationController();
     window.downloadManager = new DownloadManager();
     
-    // Add CSS for success/error messages
+    // Add CSS for success/error messages and modal
     const style = document.createElement('style');
     style.textContent = `
         .success-message, .error-message {
@@ -226,11 +221,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         .success-message {
-            background: linear-gradient(135deg, #4CAF50, #45a049);
+            background: linear-gradient(135deg, #00ff41, #00cc33);
+            color: #000;
+            border: 1px solid #00ff41;
         }
         
         .error-message {
-            background: linear-gradient(135deg, #f44336, #d32f2f);
+            background: linear-gradient(135deg, #ff4444, #cc0000);
+            color: white;
+            border: 1px solid #ff4444;
         }
         
         .preview-modal {
@@ -248,7 +247,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         .modal-content {
-            background: white;
+            background: #111;
+            border: 1px solid #00ff41;
             border-radius: 16px;
             padding: 2rem;
             max-width: 600px;
@@ -256,6 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
             max-height: 80vh;
             overflow-y: auto;
             position: relative;
+            color: #e0e0e0;
         }
         
         .close-modal {
@@ -264,13 +265,14 @@ document.addEventListener('DOMContentLoaded', () => {
             right: 15px;
             font-size: 2rem;
             cursor: pointer;
-            color: #666;
+            color: #00ff41;
         }
         
         .preview-image {
             width: 100%;
             border-radius: 8px;
             margin-bottom: 1rem;
+            border: 1px solid #00ff41;
         }
         
         @keyframes slideInRight {
