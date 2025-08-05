@@ -1,59 +1,92 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaerlin Theme - Startseite</title>
+    <title>Kaerlin Theme - Official Website</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header class="hero-section">
-            <div class="hero-content">
-                <h1 class="hero-title animate-fade-in">Kaerlin Theme</h1>
-                <p class="hero-subtitle animate-slide-up">Ein elegantes Vencord Theme für dein Discord</p>
-                <div class="hero-buttons animate-slide-up-delay">
-                    <a href="download.html" class="btn btn-primary">Download</a>
-                    <button class="btn btn-secondary" onclick="scrollToInfo()">Mehr erfahren</button>
-                </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">Kaerlin Theme</h1>
+            <div class="nav-links">
+                <a href="#info" class="nav-link">About</a>
+                <a href="download.html" class="nav-link">Download</a>
             </div>
-            <div class="hero-visual animate-float">
-                <div class="theme-preview">
-                    <div class="discord-mock">
-                        <div class="sidebar"></div>
-                        <div class="chat-area">
-                            <div class="message-bubble"></div>
-                            <div class="message-bubble"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+        </div>
+    </nav>
 
-        <section class="info-section" id="info">
-            <div class="info-content">
-                <h2 class="section-title">Über das Theme</h2>
-                <div class="features">
-                    <div class="feature-card animate-on-scroll">
-                        <div class="feature-icon">🎨</div>
-                        <h3>Minimalistisches Design</h3>
-                        <p>Saubere Linien und moderne Farben für ein professionelles Aussehen</p>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-in">
+                Kaerlin Theme
+                <span class="hero-subtitle">for Vencord</span>
+            </h1>
+            <p class="hero-description animate-slide-up">
+                Experience Discord like never before with our sleek, minimalist theme featuring modern dark aesthetics and vibrant green accents.
+            </p>
+            <div class="hero-actions animate-slide-up">
+                <a href="download.html" class="btn btn-primary">Download Now</a>
+                <button class="btn btn-secondary" onclick="scrollToInfo()">Learn More</button>
+            </div>
+        </div>
+        <div class="hero-visual animate-on-scroll">
+            <div class="discord-mockup">
+                <div class="mockup-header">
+                    <div class="mockup-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
-                    <div class="feature-card animate-on-scroll">
-                        <div class="feature-icon">⚡</div>
-                        <h3>Optimierte Performance</h3>
-                        <p>Leichtgewichtiges CSS ohne Performance-Einbußen</p>
-                    </div>
-                    <div class="feature-card animate-on-scroll">
-                        <div class="feature-icon">🔧</div>
-                        <h3>Einfache Installation</h3>
-                        <p>Direkte Integration mit Vencord in wenigen Klicks</p>
+                    <div class="mockup-title">Discord</div>
+                </div>
+                <div class="mockup-content">
+                    <div class="mockup-sidebar"></div>
+                    <div class="mockup-main">
+                        <div class="mockup-message"></div>
+                        <div class="mockup-message"></div>
+                        <div class="mockup-message"></div>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
+    <section class="info-section" id="info">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Why Kaerlin Theme?</h2>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Modern Design</h3>
+                    <p>Clean, minimalist interface with carefully crafted color schemes that reduce eye strain and enhance your Discord experience.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightweight</h3>
+                    <p>Optimized CSS that won't slow down your Discord. Fast loading times with minimal resource usage.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Easy Installation</h3>
+                    <p>One-click installation with Vencord. No technical knowledge required - just download and enjoy!</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">📱</div>
+                    <h3>Responsive</h3>
+                    <p>Looks great on all screen sizes. Whether you're on desktop, tablet, or mobile, the theme adapts perfectly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Kaerlin Theme. Made with ❤️ for the Discord community.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
