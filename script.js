@@ -49,7 +49,7 @@ class AnimationController {
         if (heroVisual) {
             window.addEventListener('scroll', () => {
                 const scrolled = window.pageYOffset;
-                const rate = scrolled * -0.5;
+                const rate = scrolled * -0.3;
                 heroVisual.style.transform = `translateY(${rate}px)`;
             });
         }
@@ -190,10 +190,20 @@ class DownloadManager {
 }
 
 // Utility Functions
-function scrollToInfo() {
-    const infoSection = document.getElementById('info');
-    if (infoSection) {
-        infoSection.scrollIntoView({
+function scrollToPreview() {
+    const previewSection = document.getElementById('preview');
+    if (previewSection) {
+        previewSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
+
+function scrollToFeatures() {
+    const featuresSection = document.getElementById('features');
+    if (featuresSection) {
+        featuresSection.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         });
@@ -227,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         .error-message {
-            background: linear-gradient(135deg: #ff4444, #cc0000);
+            background: linear-gradient(135deg, #ff4444, #cc0000);
             color: white;
             border: 1px solid #ff4444;
         }
@@ -302,4 +312,5 @@ window.previewTheme = () => {
     }
 };
 
-window.scrollToInfo = scrollToInfo;
+window.scrollToPreview = scrollToPreview;
+window.scrollToFeatures = scrollToFeatures;
